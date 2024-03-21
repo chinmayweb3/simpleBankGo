@@ -7,7 +7,7 @@ import (
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-var currency = []string{"USD", "IND", "EURO", "JPY"}
+var currency = []string{"USD", "IND", "EUR", "JPY"}
 
 // RandomInt  returns a random integer between min and max
 func RandomInt(min, max int64) int64 {
