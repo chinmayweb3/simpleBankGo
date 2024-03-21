@@ -5,6 +5,7 @@ postgres13 :
 createdb:
 	docker exec -it postgres13 createdb -U root simple_bank
 
+# migrateup will pull all the schema from the sql file into the database 
 migrateup:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
