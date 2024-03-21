@@ -34,7 +34,7 @@ func RandomOwner() string {
 
 // RandomMoney  creates money value to use in tests
 func RandomMoney() int64 {
-	return RandomInt(10, 1000)
+	return RandomInt(0, 1000)
 }
 
 // RandomCurrency  selects a random currency from the list of ["USD", "INR", "EUR", "JPY"]
