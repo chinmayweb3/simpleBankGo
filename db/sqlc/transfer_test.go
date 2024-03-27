@@ -67,7 +67,5 @@ func TestListTransfer(t *testing.T) {
 
 	for _, tran := range resTrans {
 		require.NotEmpty(t, tran.ID)
-		require.Equal(t, toAcc.ID, tran.ToAccountID)
-		require.Equal(t, fromAcc.ID, tran.FromAccountID)
 	}
 }

@@ -11,16 +11,19 @@ import (
 
 var TestQueries *Queries
 
+var TestDB *sql.DB
+
 const driverName = "postgres"
 const dataSourceName = "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable"
 
 func TestMain(m *testing.M) {
-	db, err := sql.Open(driverName, dataSourceName)
+	var err error
+	TestDB, err = sql.Open(driverName, dataSourceName)
 	if err != nil {
 		log.Fatalf("failed TESTMAIN : %+v", err)
 	}
 
-	TestQueries = New(db)
+	TestQueries = New(TestDB)
 
 	os.Exit(m.Run())
 
