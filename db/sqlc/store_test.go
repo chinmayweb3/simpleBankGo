@@ -22,8 +22,8 @@ func TestTransferTx(t *testing.T) {
 	}
 	const n = 5
 
-	errs := make(chan error, n)
-	results := make(chan TransferTxResult, n)
+	errs := make(chan error)
+	results := make(chan TransferTxResult)
 
 	for range [n]int{} {
 		go func() {
